@@ -5,27 +5,29 @@ body {
     padding: 0;
 }
 
-nav {
-    position: fixed;
-    z-index: 1;
-    overflow-y: hidden;
-    left: 0;
-}
-
 nav header {
     margin: 10px;
+}
+
+nav {
+    /* position: fixed; */
 }
 
 nav li{
     list-style-type: none;
     border-top: 1px solid black;
-    padding: 10px 30px;
+}
+
+li a {
+    display: block;
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     color: black;
     font-weight: 400;
+    padding: 10px 30px;
 }
 
 header {
@@ -52,11 +54,20 @@ code {
 
 .flex-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.nav-container {
+.sticky-nav {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
     border-right: 2px solid black;
-    width: 44rem;
+}
+
+.fixed {
+    position: fixed;
+    width: 57px; 
 }
 
 #introduction, #variable_scope, #constants, #if_else_statement, #while_statement {
@@ -66,9 +77,6 @@ code {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #navbar {
-        position: fixed;
-        z-index: 1;
-        overflow-y: hidden;
-        left: 0;
+        
     }
 } 
