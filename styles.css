@@ -9,10 +9,6 @@ nav header {
     margin: 10px;
 }
 
-nav {
-    /* position: fixed; */
-}
-
 nav li{
     list-style-type: none;
     border-top: 1px solid black;
@@ -56,18 +52,16 @@ code {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 100vh;
 }
 
-.sticky-nav {
-    display: flex;
+.nav-wrapper {
     flex-shrink: 0;
-    flex-wrap: nowrap;
     border-right: 2px solid black;
 }
 
-.fixed {
-    position: fixed;
-    width: 57px; 
+main {
+    overflow: auto;
 }
 
 #introduction, #variable_scope, #constants, #if_else_statement, #while_statement {
@@ -77,6 +71,6 @@ code {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #navbar {
-        
+       flex-shrink: 0; 
     }
 } 
